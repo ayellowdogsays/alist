@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "/*/!(*.db)",
+      "use": "@vercel/go"
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/api/index" }
+  ]
+}
